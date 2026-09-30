@@ -1,7 +1,7 @@
 const $ = (sel) => document.querySelector(sel);
 const normalize = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 const escape = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const initials = (nome) => nome.split(/\s+/).filter((p) => p.length > 2).slice(0, 2).map((p) => p[0]).join('');
+const initials = (nome) => nome.replace(/[^\p{L}\s]/gu, '').split(/\s+/).filter((p) => p.length > 2).slice(0, 2).map((p) => p[0]).join('');
 
 // ===== Render =====
 const selos = (p) => [
@@ -58,7 +58,13 @@ const area = (a, extraClass = '') => {
 };
 
 $('#miro').href = EQUIPE.miro;
-$('#total').textContent = EQUIPE.total;
+// Total do Audiovisual: pessoas únicas da gestão + áreas (sem o bloco de Marketing)
+const nomes = (t) => [...(t.pessoas || []), ...(t.subtimes || []).flatMap((s) => s.pessoas)].map((p) => p.nome);
+const totalAudiovisual = new Set([
+  ...EQUIPE.gestao.map((p) => p.nome),
+  ...EQUIPE.areas.flatMap((a) => [...(a.coordenacao || []).map((p) => p.nome), ...a.times.flatMap(nomes)]),
+]).size;
+$('#total').textContent = totalAudiovisual;
 $('#atualizacao').textContent = EQUIPE.atualizacao;
 $('#gestao').innerHTML = EQUIPE.gestao.map((p) => lider(p, 'Gestão')).join('');
 $('#relacionados').innerHTML = `<span>Gestores relacionados</span> ${EQUIPE.relacionados.map((n) => `<b>${escape(n)}</b>`).join(' · ')}`;

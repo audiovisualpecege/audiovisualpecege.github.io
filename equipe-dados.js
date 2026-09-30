@@ -1,5 +1,6 @@
 // Dados do Mapa da Equipe (transcritos do quadro "Audiovisual - Pecege" no Miro).
 // Para atualizar: edite as listas abaixo e a data de atualização.
+// Os totais (geral, por área e por time) são calculados automaticamente.
 //
 // Campos de cada pessoa:
 //   nome    — obrigatório
@@ -9,8 +10,7 @@
 //   freela  — true                         (vínculo freela)
 
 const EQUIPE = {
-  atualizacao: '29/07/2026',
-  total: 53,
+  atualizacao: '30/09/2026',
   miro: 'https://miro.com/app/board/uXjVORwJtBg=/?share_link_id=547994466562',
 
   gestao: [
@@ -117,7 +117,6 @@ const EQUIPE = {
               pessoas: [
                 { nome: 'Adriana Caberlin de Souza', gestao: 'paulo' },
                 { nome: 'Amanda Cristina Girotto', gestao: 'paulo' },
-                { nome: 'Arthur Pereira e Magalhães', gestao: 'paulo', anos: 5 },
                 { nome: 'Felipe de Ponte', gestao: 'paulo' },
                 { nome: 'Gabriel Franco Annunciato', gestao: 'paulo', anos: 5 },
                 { nome: 'Mariana Sigrist Demori', gestao: 'paulo' },
@@ -173,6 +172,8 @@ const EQUIPE = {
   // Bloco de Marketing que aparece ao lado no mesmo quadro do Miro
   marketing: {
     nome: 'Marketing e Design',
+    cargo: 'Gestor',
+    coordenacao: [{ nome: 'Matheus (Sorriso)', gestao: 'mkt' }],
     times: [
       { nome: 'Marketing', pessoas: [{ nome: 'Thiago Novaes', anos: 5 }] },
       { nome: 'Design / Coordenação', pessoas: [{ nome: 'Wesllei Manoel Figueiredo de Souza', anos: 5 }] },

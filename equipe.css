@@ -107,7 +107,7 @@
 .g-coord { --g: var(--g-coord); }
 .g-freela { --g: var(--g-freela); }
 .g-novo { --g: var(--g-novo); }
-.area-mkt .pessoa { --g: var(--g-mkt); }
+.g-mkt, .area-mkt .pessoa { --g: var(--g-mkt); }
 
 /* ===== Áreas ===== */
 .area { padding-top: 24px; }
