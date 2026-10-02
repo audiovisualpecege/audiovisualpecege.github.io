@@ -1,44 +1,9 @@
 /* Download Chiaro Apps — usa os tokens de styles.css e a base de subpagina.css */
 .intro .meta { max-width: 640px; font-size: 16px; line-height: var(--leading-normal); }
 
-/* ===== Menu superior (abas) ===== */
-.apps-menu {
-  position: sticky; top: 0; z-index: 10;
-  margin: 0 -16px 20px;
-  padding: 10px 16px;
-  background: rgba(7, 0, 16, .82);
-  backdrop-filter: blur(var(--blur-glass));
-  -webkit-backdrop-filter: blur(var(--blur-glass));
-  border-bottom: 1px solid var(--border-subtle);
-}
-.apps-menu-inner {
-  display: flex; gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.apps-menu-inner::-webkit-scrollbar { display: none; }
-
-.apps-tab {
-  flex-shrink: 0;
-  display: flex; align-items: center; gap: 10px;
-  padding: 6px 18px 6px 6px;
-  border-radius: var(--radius-pill);
-  border: 1.5px solid var(--border-subtle);
-  background: var(--surface-card);
-  color: var(--text-secondary);
-  transition: background var(--dur-fast) var(--ease-cine), border-color var(--dur-fast) var(--ease-cine);
-}
-/* Ícones dos apps sem recorte: cada PNG já vem com o próprio formato */
-.apps-tab img { width: 30px; height: 30px; object-fit: contain; }
-.apps-tab span { display: flex; flex-direction: column; line-height: 1.25; }
-.apps-tab b { font-family: var(--font-display); font-size: 13px; font-weight: var(--weight-bold); letter-spacing: .03em; text-transform: uppercase; color: var(--text-primary); }
-.apps-tab small { font-size: 12px; color: var(--text-muted); }
-.apps-tab:hover { border-color: var(--border-strong); background: var(--accent-soft); }
-.apps-tab[aria-selected="true"] { border-color: var(--accent); background: var(--accent-soft); }
-.apps-tab[aria-selected="true"] small { color: var(--text-brand); }
-
-/* ===== App ===== */
+/* ===== Apps: um bloco por app, todos visíveis ===== */
 .apps { display: grid; gap: 16px; }
+.app { scroll-margin-top: 16px; } /* links antigos com #downloader / #grabber param com folga */
 
 .app {
   display: grid;
@@ -145,10 +110,6 @@ kbd {
   .app { grid-template-columns: 1fr; padding: 20px; }
 }
 @media (max-width: 560px) {
-  .apps-tab { flex: 1 0 auto; gap: 8px; padding: 5px 14px 5px 5px; }
-  .apps-tab img { width: 24px; height: 24px; }
-  .apps-tab b { font-size: 12px; white-space: nowrap; }
-  .apps-tab small { display: none; }
   .app h2 { font-size: 22px; }
   .app-head img { width: 56px; height: 56px; }
   .passos { padding: 16px; }

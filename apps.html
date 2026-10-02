@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chiaro Apps · Audiovisual Pecege</title>
-  <meta name="description" content="Apps para todos da equipe Audiovisual: baixe e instale.">
+  <meta name="description" content="Apps para todos da equipe Audiovisual: Chiaro Downloader, Chiaro Grabber e GC Render.">
   <meta name="theme-color" content="#070010">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icone-32.png">
@@ -37,23 +37,10 @@
       <p class="meta">Apps para todos da equipe, para facilitar algumas atividades do dia a dia e acelerar alguns processos. <b>Usem sem moderação.</b></p>
     </section>
 
-    <!-- Menu dos apps. Para adicionar um app: um <a> aqui e uma <section class="app"> abaixo, com o mesmo id -->
-    <nav class="apps-menu" aria-label="Chiaro Apps">
-      <div class="apps-menu-inner" role="tablist">
-        <a href="#downloader" role="tab" class="apps-tab" aria-controls="downloader">
-          <img src="assets/apps/downloader.png" alt="" width="28" height="28">
-          <span><b>Chiaro Downloader</b><small>Baixar vídeos e capturar sites</small></span>
-        </a>
-        <a href="#grabber" role="tab" class="apps-tab" aria-controls="grabber">
-          <img src="assets/apps/grabber.png" alt="" width="28" height="28">
-          <span><b>Chiaro Grabber</b><small>Embeds do Vimeo em planilha</small></span>
-        </a>
-      </div>
-    </nav>
-
+    <!-- Um bloco por app, todos visíveis. Para adicionar um app: copie uma <section class="app"> -->
     <main class="apps">
 
-      <section class="app" id="downloader" role="tabpanel" aria-label="Chiaro Downloader + WebShot">
+      <section class="app" id="downloader" aria-label="Chiaro Downloader + WebShot">
         <div class="app-info">
           <header class="app-head">
             <img src="assets/apps/downloader.png" alt="" width="64" height="64">
@@ -89,7 +76,7 @@
         </div>
       </section>
 
-      <section class="app" id="grabber" role="tabpanel" aria-label="Chiaro Grabber">
+      <section class="app" id="grabber" aria-label="Chiaro Grabber">
         <div class="app-info">
           <header class="app-head">
             <img src="assets/apps/grabber.png" alt="" width="64" height="64">
@@ -124,18 +111,49 @@
           <p class="obs">Para atualizar, rode o instalador novo, clique em ↻ no cartão da extensão e recarregue (F5) a aba do Vimeo.</p>
         </div>
       </section>
+
+      <section class="app" id="gc-render" aria-label="GC Render">
+        <div class="app-info">
+          <header class="app-head">
+            <img src="assets/apps/gc-render.png" alt="" width="64" height="64">
+            <div>
+              <h2>GC <strong>Render</strong></h2>
+              <span class="versao">v1.0.6 · Programa do Windows</span>
+            </div>
+          </header>
+          <p class="app-desc">Renderiza os GCs feitos no After Effects, no formato <b>.mogrt</b>, sem precisar abrir nenhum software da Adobe.</p>
+          <ul class="recursos">
+            <li><svg><use href="#i-check"/></svg>Renderiza GCs em .mogrt direto, sem After Effects nem Premiere abertos</li>
+            <li><svg><use href="#i-check"/></svg>Programa próprio para Windows, com instalador</li>
+          </ul>
+          <div class="acoes">
+            <!-- 52 MB: maior que o limite de upload pelo site do GitHub (25 MB), por isso fica numa Release, e não em downloads/ -->
+            <a class="baixar" href="https://github.com/audiovisualpecege/audiovisualpecege.github.io/releases/download/gc-render-v1.0.6/GC.Render.Setup.1.0.6.exe">
+              <svg><use href="#i-download"/></svg>Baixar instalador <small>.exe · 52 MB</small>
+            </a>
+          </div>
+        </div>
+
+        <div class="passos">
+          <h3>Como instalar</h3>
+          <ol>
+            <li>Baixe e abra o instalador.</li>
+            <li>Siga o assistente e clique em <b>Instalar</b>.</li>
+            <li>Abra o <b>GC Render</b> pelo Menu Iniciar.</li>
+          </ol>
+          <p class="obs">Para atualizar, baixe o instalador novo e rode por cima da versão instalada.</p>
+        </div>
+      </section>
     </main>
 
     <aside class="aviso">
       <svg><use href="#i-info"/></svg>
-      <p>Os apps são internos e não têm assinatura digital. Se o Chrome perguntar se quer manter o arquivo, clique em <b>Manter</b>. Se o Windows mostrar “O Windows protegeu o computador”, clique em <b>Mais informações → Executar assim mesmo</b>. De vez em quando o Chrome mostra o balão “Desative as extensões do modo de desenvolvedor”: é só fechar. Precisa de Windows e Google Chrome.</p>
+      <p>Os apps são internos e não têm assinatura digital. Se o Chrome perguntar se quer manter o arquivo, clique em <b>Manter</b>. Se o Windows mostrar “O Windows protegeu o computador”, clique em <b>Mais informações → Executar assim mesmo</b>. Nas extensões, de vez em quando o Chrome mostra o balão “Desative as extensões do modo de desenvolvedor”: é só fechar. Todos os apps precisam de Windows; as extensões também precisam do Google Chrome.</p>
     </aside>
 
     <footer class="rodape">
       <a href="index.html">← Voltar aos atalhos</a>
     </footer>
   </div>
-
-  <script src="apps.js"></script>
 </body>
 </html>
