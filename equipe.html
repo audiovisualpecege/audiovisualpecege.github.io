@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="noite">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mapa da Equipe · Audiovisual Pecege</title>
   <meta name="description" content="Estrutura da equipe Audiovisual Pecege por área, time e gestão.">
-  <meta name="theme-color" content="#18181B">
+  <meta name="theme-color" content="#070010">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icone-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icone-192.png">
   <link rel="apple-touch-icon" href="assets/icone-180.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/Altivo-Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="fonts/Altivo-Light.otf" as="font" type="font/otf" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpagina.css">
   <link rel="stylesheet" href="equipe.css">
 </head>
 <body>
@@ -30,7 +30,8 @@
   <div class="wrap">
     <header class="topbar">
       <a href="index.html" class="back"><svg><use href="#i-back"/></svg>Atalhos</a>
-      <a class="miro" id="miro" href="#" target="_blank" rel="noopener">Abrir no Miro<svg><use href="#i-arrow"/></svg></a>
+      <!-- O link vem de EQUIPE.miro (equipe-dados.js); se estiver vazio, o botão fica escondido -->
+      <a class="miro" id="miro" href="#" target="_blank" rel="noopener" hidden>Abrir no Miro<svg><use href="#i-arrow"/></svg></a>
     </header>
 
     <section class="intro">
@@ -62,7 +63,7 @@
 
     <p class="vazio" id="vazio" hidden>Ninguém encontrado para essa busca.</p>
 
-    <noscript><p class="vazio">Ative o JavaScript para ver o mapa, ou <a href="https://miro.com/app/board/uXjVORwJtBg=/?share_link_id=547994466562">abra no Miro</a>.</p></noscript>
+    <noscript><p class="vazio">Ative o JavaScript para ver o mapa.</p></noscript>
 
     <footer class="rodape">
       <a href="index.html">← Voltar aos atalhos</a>

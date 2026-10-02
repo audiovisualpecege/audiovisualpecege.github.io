@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="noite">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chiaro Apps · Audiovisual Pecege</title>
+  <meta name="description" content="Apps para todos da equipe Audiovisual: baixe e instale.">
+  <meta name="theme-color" content="#070010">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icone-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icone-192.png">
+  <link rel="apple-touch-icon" href="assets/icone-180.png">
+  <link rel="preload" href="fonts/Altivo-Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="fonts/Altivo-Light.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpagina.css">
+  <link rel="stylesheet" href="apps.css">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="wrap">
+    <header class="topbar">
+      <a href="index.html" class="back"><svg><use href="#i-back"/></svg>Atalhos</a>
+    </header>
+
+    <section class="intro">
+      <h1>Download <span>Chiaro Apps</span></h1>
+      <p class="meta">Apps para todos da equipe, para facilitar algumas atividades do dia a dia e acelerar alguns processos. <b>Usem sem moderação.</b></p>
+    </section>
+
+    <!-- Menu dos apps. Para adicionar um app: um <a> aqui e uma <section class="app"> abaixo, com o mesmo id -->
+    <nav class="apps-menu" aria-label="Chiaro Apps">
+      <div class="apps-menu-inner" role="tablist">
+        <a href="#downloader" role="tab" class="apps-tab" aria-controls="downloader">
+          <img src="assets/apps/downloader.png" alt="" width="28" height="28">
+          <span><b>Chiaro Downloader</b><small>Baixar vídeos e capturar sites</small></span>
+        </a>
+        <a href="#grabber" role="tab" class="apps-tab" aria-controls="grabber">
+          <img src="assets/apps/grabber.png" alt="" width="28" height="28">
+          <span><b>Chiaro Grabber</b><small>Embeds do Vimeo em planilha</small></span>
+        </a>
+      </div>
+    </nav>
+
+    <main class="apps">
+
+      <section class="app" id="downloader" role="tabpanel" aria-label="Chiaro Downloader + WebShot">
+        <div class="app-info">
+          <header class="app-head">
+            <img src="assets/apps/downloader.png" alt="" width="64" height="64">
+            <div>
+              <h2>Chiaro <strong>Downloader</strong></h2>
+              <span class="versao">v3.0.0 · Extensão do Chrome · com o WebShot</span>
+            </div>
+          </header>
+          <p class="app-desc">Uma extensão, duas ferramentas. Na aba <b>Baixar</b>, salva vídeos do YouTube, TikTok, Instagram e X, inteiros ou só um trecho. Na aba <b>Capturar</b> (o antigo Chiaro WebShot), captura sites inteiros em altíssima resolução, prontos para o After Effects.</p>
+          <ul class="recursos">
+            <li><svg><use href="#i-check"/></svg>MP4 em 1080p, 720p ou resolução máxima, MKV e só o áudio (M4A)</li>
+            <li><svg><use href="#i-check"/></svg>Corta um trecho e baixa só ele, sem baixar o vídeo inteiro</li>
+            <li><svg><use href="#i-check"/></svg>Página inteira com 4000 px ou mais, em Pack Leve ou Pack Completo para After Effects, PNG, JPEG, WebP ou SVG</li>
+            <li><svg><use href="#i-check"/></svg><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> baixa o vídeo, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd> só o áudio, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> captura a página</li>
+          </ul>
+          <div class="acoes">
+            <a class="baixar" href="downloads/Chiaro-Downloader-Setup-3.0.0.exe" download>
+              <svg><use href="#i-download"/></svg>Baixar instalador <small>.exe · 632 KB</small>
+            </a>
+          </div>
+        </div>
+
+        <div class="passos">
+          <h3>Como instalar</h3>
+          <ol>
+            <li>Baixe e abra o instalador e aceite o pedido de administrador.</li>
+            <li>Confirme a pasta (<b>C:\VideoDownloader</b>) e clique em <b>Instalar</b>. Ele baixa Python, yt-dlp, ffmpeg e Deno: precisa de internet e leva alguns minutos.</li>
+            <li>No último passo, abra o <b>chrome://extensions</b> e ative o <b>Modo do desenvolvedor</b>.</li>
+            <li>Clique em <b>Carregar sem compactação</b> e cole o caminho que o instalador copiou (<kbd>Ctrl</kbd>+<kbd>V</kbd>).</li>
+          </ol>
+          <p class="obs"><b>Já usava o Chiaro WebShot?</b> Deixe marcada a opção de remover o WebShot antigo no instalador e, depois, clique em <b>Remover</b> no cartão dele em chrome://extensions. A captura agora fica na aba Capturar.</p>
+          <p class="obs">Quando algum site mudar e o download parar, clique em <b>Atualizar</b> no popup da extensão.</p>
+        </div>
+      </section>
+
+      <section class="app" id="grabber" role="tabpanel" aria-label="Chiaro Grabber">
+        <div class="app-info">
+          <header class="app-head">
+            <img src="assets/apps/grabber.png" alt="" width="64" height="64">
+            <div>
+              <h2>Chiaro <strong>Grabber</strong></h2>
+              <span class="versao">v1.2.0 · Extensão do Chrome</span>
+            </div>
+          </header>
+          <p class="app-desc">Lê uma pasta do Vimeo e devolve, de uma vez só, o código de embed de todos os vídeos: o mesmo bloco que o <b>Share → Embed</b> entrega, vídeo por vídeo.</p>
+          <ul class="recursos">
+            <li><svg><use href="#i-check"/></svg>Exporta em Excel (.xlsx), CSV ou copia direto para a planilha</li>
+            <li><svg><use href="#i-check"/></svg>Colunas com título, ID, link do Vimeo, URL do player e embed</li>
+            <li><svg><use href="#i-check"/></svg>Junta várias pastas numa coleção, numerada e sem vídeos repetidos</li>
+            <li><svg><use href="#i-check"/></svg>Usa a sua própria sessão do Vimeo: não pede token nem API</li>
+          </ul>
+          <div class="acoes">
+            <a class="baixar" href="downloads/Chiaro-Grabber-Setup-1.2.0.exe" download>
+              <svg><use href="#i-download"/></svg>Baixar instalador <small>.exe · 490 KB</small>
+            </a>
+          </div>
+        </div>
+
+        <div class="passos">
+          <h3>Como instalar</h3>
+          <ol>
+            <li>Baixe e abra o instalador e clique em <b>Instalar</b>. Não precisa de administrador.</li>
+            <li>No último passo, abra o <b>chrome://extensions</b> e ative o <b>Modo do desenvolvedor</b>.</li>
+            <li>Clique em <b>Carregar sem compactação</b> e cole o caminho que o instalador copiou (<kbd>Ctrl</kbd>+<kbd>V</kbd>).</li>
+            <li>Abra uma pasta no Vimeo, já logado, clique no ícone da extensão e em <b>Extrair</b>.</li>
+          </ol>
+          <p class="obs"><b>Já usava o Vimeo Embed Grabber?</b> O instalador encontra a versão antiga e oferece apagá-la. Depois, clique em <b>Remover</b> no cartão antigo em chrome://extensions.</p>
+          <p class="obs">Para atualizar, rode o instalador novo, clique em ↻ no cartão da extensão e recarregue (F5) a aba do Vimeo.</p>
+        </div>
+      </section>
+    </main>
+
+    <aside class="aviso">
+      <svg><use href="#i-info"/></svg>
+      <p>Os apps são internos e não têm assinatura digital. Se o Chrome perguntar se quer manter o arquivo, clique em <b>Manter</b>. Se o Windows mostrar “O Windows protegeu o computador”, clique em <b>Mais informações → Executar assim mesmo</b>. De vez em quando o Chrome mostra o balão “Desative as extensões do modo de desenvolvedor”: é só fechar. Precisa de Windows e Google Chrome.</p>
+    </aside>
+
+    <footer class="rodape">
+      <a href="index.html">← Voltar aos atalhos</a>
+    </footer>
+  </div>
+
+  <script src="apps.js"></script>
+</body>
+</html>

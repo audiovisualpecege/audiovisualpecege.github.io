@@ -57,7 +57,7 @@ const area = (a, extraClass = '') => {
   </section>`;
 };
 
-$('#miro').href = EQUIPE.miro;
+if (EQUIPE.miro) { $('#miro').href = EQUIPE.miro; $('#miro').hidden = false; }
 // Total do Audiovisual: pessoas únicas da gestão + áreas (sem o bloco de Marketing)
 const nomes = (t) => [...(t.pessoas || []), ...(t.subtimes || []).flatMap((s) => s.pessoas)].map((p) => p.nome);
 const totalAudiovisual = new Set([

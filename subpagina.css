@@ -1,0 +1,42 @@
+/* Base das páginas internas (Mapa da Equipe, Chiaro Apps) — usa os tokens de styles.css */
+[hidden] { display: none !important; }
+
+.wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px 16px 32px; }
+.wrap-estreito { max-width: 640px; }
+
+/* ===== Topo: botões secundários em pílula ===== */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.back, .miro {
+  display: inline-flex; align-items: center; gap: 8px;
+  height: 36px; padding: 0 16px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border-brand);
+  color: var(--text-brand);
+  font-family: var(--font-display);
+  font-size: 13px; font-weight: var(--weight-bold);
+  letter-spacing: .02em; text-transform: uppercase;
+  transition: background var(--dur-fast) var(--ease-cine), transform var(--dur-fast) var(--ease-cine);
+}
+.back svg, .miro svg { font-size: 16px; }
+.back:hover, .miro:hover { background: var(--accent-soft); }
+.back:active, .miro:active { transform: scale(.98); }
+
+/* ===== Título: Light + Black ===== */
+.intro { margin: 32px 0 22px; }
+.intro h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 6vw, 64px);
+  font-weight: var(--type-title-light);
+  line-height: var(--leading-tight);
+  letter-spacing: -.005em;
+  text-transform: uppercase;
+}
+.intro h1 span { font-weight: var(--type-title-bold); color: var(--chiaro-lavanda); }
+.meta { margin: 12px 0 0; color: var(--text-secondary); font-size: 15px; }
+.meta b { color: var(--text-primary); font-weight: 600; }
+
+/* ===== Rodapé ===== */
+.rodape { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--border-subtle); font-size: 14px; }
+.rodape a { color: var(--text-secondary); }
+.rodape a:hover { color: var(--accent-hover); text-decoration: underline; text-underline-offset: 3px; }

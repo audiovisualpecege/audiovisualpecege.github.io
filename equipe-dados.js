@@ -11,6 +11,8 @@
 
 const EQUIPE = {
   atualizacao: '30/09/2026',
+  // Link do quadro no Miro. Vazio = botão "Abrir no Miro" escondido.
+  // PÚBLICO: trocar pelo link restrito (este link abre o quadro sem login)
   miro: 'https://miro.com/app/board/uXjVORwJtBg=/?share_link_id=547994466562',
 
   gestao: [

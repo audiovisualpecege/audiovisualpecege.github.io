@@ -1,46 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="noite">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Audiovisual Pecege</title>
   <meta name="description" content="Atalhos rápidos para as planilhas e informações da equipe Audiovisual Pecege.">
-  <meta name="theme-color" content="#18181B">
+  <meta name="theme-color" content="#070010">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icone-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/icone-192.png">
   <link rel="apple-touch-icon" href="assets/icone-180.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/Altivo-Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="fonts/Altivo-Light.otf" as="font" type="font/otf" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Ícones (sprite) -->
+  <!-- Ícones (sprite, traços no estilo Lucide) -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></symbol>
       <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><path d="M12 8v4m0 0-5 4.5M12 12l5 4.5"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
       <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></symbol>
       <symbol id="i-film" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2.2"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></symbol>
+      <symbol id="i-hash" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></symbol>
       <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></symbol>
-      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
-      <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8M12 17.5v-11"/></symbol>
-      <symbol id="i-folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
-      <symbol id="i-languages" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.2 3.5a.5.5 0 0 0 .8-.4V7.9a.5.5 0 0 0-.8-.4L16 11"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+      <symbol id="i-clapper" viewBox="0 0 24 24"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3ZM6.2 5.3l3.1 3.9M12.4 3.4l3.1 4M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.2-6.1 2.4-.5 4.8-2 5.8-3.9"/></symbol>
+      <symbol id="i-captions" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15h4M15 15h2M7 11h2M13 11h4"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.4 10.9a1 1 0 0 0 0-1.8L12.8 5.2a2 2 0 0 0-1.7 0L2.6 9.1a1 1 0 0 0 0 1.8l8.6 3.9a2 2 0 0 0 1.7 0zM22 10v6M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></symbol>
+      <symbol id="i-sheet" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 9v12M15 9v12"/></symbol>
+      <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M9 12h6M9 16h4"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62L18.3 9.38a1 1 0 0 0-.78-.38H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+      <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></symbol>
+      <symbol id="i-kanban" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7v7M12 7v4M16 7v9"/></symbol>
+      <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
       <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
-      <symbol id="i-bus" viewBox="0 0 24 24"><path d="M8 6v6M15 6v6M2 12h19.6M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2s-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3M9 18h5"/><circle cx="7" cy="18" r="2"/><circle cx="16" cy="18" r="2"/></symbol>
       <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
       <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></symbol>
       <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
       <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 7h10v10M7 17 17 7"/></symbol>
       <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-chevron-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
     </defs>
   </svg>
 
+  <!--
+    SEGURANÇA: esta página é pública. O ideal é que todo link peça login (SSO Microsoft da Pecege
+    ou login da própria plataforma). Teste numa janela anônima: se o conteúdo aparecer sem login,
+    o link é público. Os links marcados com "PÚBLICO: trocar pelo link restrito" abriram sem login
+    na verificação de 02/10/2026 e devem ser trocados por links restritos do mesmo conteúdo.
+  -->
+
+  <!-- Menu das outras páginas -->
+  <nav class="menu-paginas" aria-label="Páginas">
+    <a href="equipe.html" data-busca="mapa da equipe pessoas organograma"><svg><use href="#i-network"/></svg>Mapa da Equipe</a>
+    <a href="apps.html" data-busca="download chiaro apps webshot downloader grabber vimeo embed extensao"><svg><use href="#i-download"/></svg>Chiaro Apps</a>
+    <a href="rh.html" data-busca="rh pecege ferias reembolso onedrive idiomas onibus"><svg><use href="#i-users"/></svg>RH Pecege</a>
+  </nav>
+
   <main class="page">
-    <!-- Perfil -->
     <header class="profile">
       <video class="avatar" src="assets/avatar-animado.mp4" poster="assets/avatar.jpeg"
              autoplay muted loop playsinline aria-hidden="true" width="68" height="68"></video>
@@ -53,74 +79,99 @@
       </ul>
     </header>
 
-    <div class="columns">
-      <!-- Coluna 1: Equipe -->
-      <div class="col">
-        <section class="group">
-          <h2>Equipe</h2>
-          <div class="links">
-            <a class="link featured" href="https://pecege.sharepoint.com/:x:/r/sites/FS-Audiovisual/Shared%20Documents/Cronogramas/Cronogramas%20semanais/Cronograma%20semanal_2024.xlsx?d=w0cfddf844a3d4fc398d4dd7770c21425&csf=1&web=1&e=s5bYvA" target="_blank" rel="noopener">
-              <img src="assets/cronograma.jpg" alt="" width="44" height="44">
-              <span class="featured-text">
-                <span class="featured-title">Cronograma</span>
-                <span class="featured-sub">Cronograma semanal da equipe</span>
-              </span>
-              <svg class="arrow"><use href="#i-arrow"/></svg>
-            </a>
-            <a class="link" href="https://pecege.sharepoint.com/sites/intranet" target="_blank" rel="noopener">
-              <svg class="icon"><use href="#i-building"/></svg><span>Intranet Pecege</span><svg class="arrow"><use href="#i-arrow"/></svg>
-            </a>
-            <a class="link" href="equipe.html">
-              <svg class="icon"><use href="#i-network"/></svg><span>Mapa da Equipe</span><svg class="arrow"><use href="#i-chevron"/></svg>
-            </a>
-            <a class="link" href="https://pecege-my.sharepoint.com/:x:/p/raoni/ESseYjitWHtMpILJFj1l6tIBZSNnTZjb-NGviACv4JrXug?e=9uhZiU" target="_blank" rel="noopener">
-              <svg class="icon"><use href="#i-key"/></svg><span>Senhas, Acessos e Cursos</span><svg class="arrow"><use href="#i-arrow"/></svg>
-            </a>
-            <a class="link" href="https://pecege-my.sharepoint.com/:x:/p/raoni/EXjnaCtHpxJMsMDUjmGa3DUBRIg0yRIHKAip3q-qpm58kw?e=m8W4YK" target="_blank" rel="noopener">
-              <svg class="icon"><use href="#i-film"/></svg><span>Códigos Vídeos</span><svg class="arrow"><use href="#i-arrow"/></svg>
-            </a>
-            <a class="link" href="https://opus.pecege.com/" target="_blank" rel="noopener">
-              <svg class="icon"><use href="#i-play"/></svg><span>Opus</span><svg class="arrow"><use href="#i-arrow"/></svg>
-            </a>
-          </div>
-        </section>
-      </div>
-
-      <!-- Coluna 2: RH + Outros -->
-      <div class="col">
-        <!-- RH -->
-        <section class="group">
-          <h2>Links RH</h2>
-          <div class="links">
-            <a class="link" href="https://pecege-my.sharepoint.com/:x:/p/raoni/EYKUjJB08HJJnk1mte6WdIIBqNAQ0yo6gOaNRkDBeiVHqA?e=ZzbNRh" target="_blank" rel="noopener">
-              <svg class="icon"><use href="#i-sun"/></svg><span>Férias 2026</span><svg class="arrow"><use href="#i-arrow"/></svg>
-            </a>
-            <a class="link" href="https://pecege-my.sharepoint.com/personal/audiovisual_pecege_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Faudiovisual%5Fpecege%5Fcom%2FDocuments%2FLinkTree%2F2024%2FReembolso&ga=1" target="_blank" rel="noopener">
-              <svg class="icon"><use href="#i-receipt"/></svg><span>Planilha e Regras de Reembolso</span><svg class="arrow"><use href="#i-arrow"/></svg>
-            </a>
-            <a class="link" href="https://pecege-my.sharepoint.com/:f:/p/isabeladonderi/EjbOYkWE1C1Mggy2pB5S2DMB9ABL1xqLLFgx_hL0s6dYrA?e=gtDGYN" target="_blank" rel="noopener">
-              <svg class="icon"><use href="#i-folder"/></svg><span>OneDrive do RH</span><svg class="arrow"><use href="#i-arrow"/></svg>
-            </a>
-            <a class="link" href="https://pecege-my.sharepoint.com/:b:/p/raoni/ESMgpYFff-NOlpdeWViL3TwBWCMShXX1g7HMiaMPHFLvRg?e=paKvx9" target="_blank" rel="noopener">
-              <svg class="icon"><use href="#i-languages"/></svg><span>Política - Programa de Idiomas Pecege</span><svg class="arrow"><use href="#i-arrow"/></svg>
-            </a>
-          </div>
-        </section>
-
-        <!-- Outros -->
-        <section class="group">
-          <h2>Outros links</h2>
-          <div class="links">
-            <a class="link" href="https://pecege.sharepoint.com/:i:/s/FS-Audiovisual/IQChC8am8p-MRpwxqypj2-pIAbpRKMZD9C61jaAh6lmduJU?e=vVWMGA" target="_blank" rel="noopener">
-              <svg class="icon"><use href="#i-target"/></svg><span>Pontos focais - Marketing (JAN/2026)</span><svg class="arrow"><use href="#i-arrow"/></svg>
-            </a>
-            <a class="link" href="https://pecege-my.sharepoint.com/:b:/p/raoni/EVOpa0MscP9EkGJ-qmzZuCIBkCKQLwI6ZZhLlEzKovmsPw?e=fZFoiR" target="_blank" rel="noopener">
-              <svg class="icon"><use href="#i-bus"/></svg><span>Horários Ônibus - Parque Tecnológico</span><svg class="arrow"><use href="#i-arrow"/></svg>
-            </a>
-          </div>
-        </section>
-      </div>
+    <!-- Cronograma semanal: sempre primeiro e maior que os outros -->
+    <div class="destaque" data-grupo>
+      <a class="link featured" href="https://pecege.sharepoint.com/:x:/r/sites/FS-Audiovisual/_layouts/15/doc2.aspx?sourcedoc=%7B0CFDDF84-4A3D-4FC3-98D4-DD7770C21425%7D&action=default&mobileredirect=true" target="_blank" rel="noopener" data-busca="cronograma semanal equipe agenda">
+        <img src="assets/cronograma.jpg" alt="" width="60" height="60">
+        <span class="featured-text">
+          <span class="featured-title">Cronograma semanal</span>
+          <span class="featured-sub">Agenda da equipe na semana</span>
+        </span>
+        <svg class="arrow"><use href="#i-arrow"/></svg>
+      </a>
     </div>
+
+    <!-- Busca: filtra os atalhos; Enter abre o primeiro resultado -->
+    <label class="busca-links">
+      <svg><use href="#i-search"/></svg>
+      <input type="search" id="busca" placeholder="Buscar atalho…" autocomplete="off" aria-label="Buscar atalho">
+      <kbd aria-hidden="true">/</kbd>
+    </label>
+
+    <div class="columns">
+      <!-- Audiovisual -->
+      <section class="group" data-grupo>
+        <h2>Audiovisual</h2>
+        <div class="links">
+          <a class="link" href="https://pecege-my.sharepoint.com/:x:/p/raoni/ESseYjitWHtMpILJFj1l6tIBZSNnTZjb-NGviACv4JrXug?e=9uhZiU" target="_blank" rel="noopener" data-busca="senhas acessos cursos login">
+            <svg class="icon"><use href="#i-key"/></svg><span>Senhas, acessos e cursos</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="link" href="https://pecege-my.sharepoint.com/:x:/p/raoni/EXjnaCtHpxJMsMDUjmGa3DUBRIg0yRIHKAip3q-qpm58kw?e=m8W4YK" target="_blank" rel="noopener" data-busca="codigos videos planilha">
+            <svg class="icon"><use href="#i-film"/></svg><span>Códigos vídeos</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="link" href="https://pecege.sharepoint.com/:i:/s/FS-Audiovisual/IQChC8am8p-MRpwxqypj2-pIAbpRKMZD9C61jaAh6lmduJU?e=vVWMGA" target="_blank" rel="noopener" data-busca="pontos focais marketing contatos janeiro 2026">
+            <svg class="icon"><use href="#i-target"/></svg><span>Pontos focais · Marketing (JAN/2026)</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Estúdios -->
+      <section class="group group-estudios" data-grupo>
+        <h2>Estúdios</h2>
+        <div class="links">
+          <!-- PÚBLICO: trocar pelo link restrito (planilha publicada na web) -->
+          <a class="link" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTt02NEWehZkq_yUD15E5U3eP_u2zmqYWkGAMymIjs2Un9ZNgxPjThq7mN3nzqR9w/pubhtml?gid=364550677&single=true" target="_blank" rel="noopener" data-busca="logistica planejamento local interatividades planilha">
+            <svg class="icon"><use href="#i-truck"/></svg><span>Logística e planejamento · Local</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <!-- PÚBLICO: trocar pelo link restrito (planilha publicada na web) -->
+          <a class="link" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTt02NEWehZkq_yUD15E5U3eP_u2zmqYWkGAMymIjs2Un9ZNgxPjThq7mN3nzqR9w/pubhtml?gid=2013941445&single=true" target="_blank" rel="noopener" data-busca="logistica planejamento inaugurais scripts planilha">
+            <svg class="icon"><use href="#i-flag"/></svg><span>Logística e planejamento · Inaugurais</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="link" href="https://pecege.sharepoint.com/sites/FS-Planejamento/Documentos%20Compartilhados/Forms/AllItems.aspx?id=%2Fsites%2FFS%2DPlanejamento%2FDocumentos%20Compartilhados%2FEst%C3%BAdios%5Fplanejamento%5Fmaterial%20aula" target="_blank" rel="noopener" data-busca="sharepoint material de aula planejamento estudios">
+            <svg class="icon"><use href="#i-book"/></svg><span>SharePoint · Material de aula</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <!-- PÚBLICO: trocar pelo link restrito (Forms aceita resposta de qualquer pessoa) -->
+          <a class="link" href="https://forms.office.com/pages/responsepage.aspx?id=sVAQkSO-ukOvIGlg4gcWuURlvbAUNvZKqzIRHF-4u5ZUQkJIM1ZSWFdHUjdKRDBEUTZOQ1VWUE5ZNS4u&route=shorturl" target="_blank" rel="noopener" data-busca="relatorio tecnico formulario forms">
+            <svg class="icon"><use href="#i-clipboard"/></svg><span>Relatório técnico</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="link" href="https://vimeo.com/log_in" target="_blank" rel="noopener" data-busca="vimeo videos">
+            <svg class="icon"><use href="#i-video"/></svg><span>Vimeo</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="link" href="https://vimeo.com/user/14237159/folder/25936789" target="_blank" rel="noopener" data-busca="vimeo pleu pasta videos">
+            <svg class="icon"><use href="#i-video"/></svg><span>Vimeo PLEU</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <!-- PÚBLICO: trocar pelo link restrito (link de convite: qualquer conta Trello entra) -->
+          <a class="link" href="https://trello.com/invite/b/5eb021f49db46a691eacc2cc/ATTI36f7c52947db8163f4932c2fd54ed68f636E9574/planejamento-produtora" target="_blank" rel="noopener" data-busca="trello quadro planejamento produtora">
+            <svg class="icon"><use href="#i-kanban"/></svg><span>Trello · Quadro</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="link" href="https://pecege.sharepoint.com/:x:/r/sites/FS-Audiovisual/_layouts/15/Doc.aspx?sourcedoc=%7B64D070BA-7DD1-4E09-9E36-FBCF473204B5%7D&action=default&mobileredirect=true" target="_blank" rel="noopener" data-busca="cronograma pleu">
+            <svg class="icon"><use href="#i-clapper"/></svg><span>Cronograma PLEU</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="link" href="https://pecege-my.sharepoint.com/:x:/p/joaoandrade/ESasvF5_zddChWAKVwXwn4kBGhdnhzDgaD_SsqvyMnYHFg?e=iTrMoJ" target="_blank" rel="noopener" data-busca="srt planilha legendas english usp">
+            <svg class="icon"><use href="#i-captions"/></svg><span>SRT planilha · English@USP</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <!-- PÚBLICO: trocar pelo link restrito (pasta compartilhada aberta no Dropbox) -->
+          <a class="link" href="https://www.dropbox.com/scl/fo/om32zu8tnyg097nxl1vb7/AJrMenSrMERTS0ULhRuMI-0?rlkey=8zt8sv8fppspiavgre8df7zfx&dl=0" target="_blank" rel="noopener" data-busca="templates aulas quadros dropbox">
+            <svg class="icon"><use href="#i-layout"/></svg><span>Templates aulas · Dropbox</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="link" href="https://www.dropbox.com/work/Banco%20de%20Imagens/Banco%20de%20Fotos%20Professores" target="_blank" rel="noopener" data-busca="fotos professores dropbox banco de imagens">
+            <svg class="icon"><use href="#i-image"/></svg><span>Fotos professores · Dropbox</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <!-- PÚBLICO: trocar pelo link restrito (Google: qualquer pessoa com o link) -->
+          <a class="link" href="https://docs.google.com/spreadsheets/d/175_RDHwhfeY18FdPIhN0OUSpFIkxOrluwylPpyqHy9Q/edit?gid=0#gid=0" target="_blank" rel="noopener" data-busca="fotos professores mba planilha google">
+            <svg class="icon"><use href="#i-sheet"/></svg><span>Fotos professores MBA · Planilha</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="link" href="https://pecege-my.sharepoint.com/:x:/r/personal/raoni_pecege_com/_layouts/15/Doc.aspx?sourcedoc=%7B2B68E778-A747-4C12-B0C0-D48E619ADC35%7D&action=default&mobileredirect=true" target="_blank" rel="noopener" data-busca="planilha codigo de aulas codigos">
+            <svg class="icon"><use href="#i-hash"/></svg><span>Planilha código de aulas</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="link" href="https://pecege-my.sharepoint.com/:x:/r/personal/liviamaria_pecege_com/_layouts/15/Doc.aspx?sourcedoc=%7B19700B0B-1768-488F-AA4C-345062C92FDA%7D&action=default&mobileredirect=true" target="_blank" rel="noopener" data-busca="planilha carbono unicarbo cronograma">
+            <svg class="icon"><use href="#i-leaf"/></svg><span>Planilha Carbono</span><svg class="arrow"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <p class="vazio-links" id="vazio" hidden></p>
 
     <footer class="footer">
       <a href="https://chiarofilmes.com/" target="_blank" rel="noopener" aria-label="Chiaro Filmes">
@@ -128,6 +179,26 @@
       </a>
     </footer>
   </main>
+
+  <!-- Plataformas Pecege: botão flutuante com menu -->
+  <div class="plataformas">
+    <div class="plataformas-menu" id="plataformas-menu" hidden>
+      <a href="https://pecege.sharepoint.com/sites/intranet" target="_blank" rel="noopener" data-busca="intranet pecege">
+        <svg><use href="#i-building"/></svg><span>Intranet Pecege</span><svg class="arrow-mini"><use href="#i-arrow"/></svg>
+      </a>
+      <a href="https://opus.pecege.com/" target="_blank" rel="noopener" data-busca="opus plataforma">
+        <svg><use href="#i-play"/></svg><span>Opus</span><svg class="arrow-mini"><use href="#i-arrow"/></svg>
+      </a>
+      <a href="https://dashboard.mbx.academy" target="_blank" rel="noopener" data-busca="mbx plataforma academy">
+        <svg><use href="#i-cap"/></svg><span>MBX</span><svg class="arrow-mini"><use href="#i-arrow"/></svg>
+      </a>
+    </div>
+    <button type="button" class="plataformas-botao" aria-expanded="false" aria-controls="plataformas-menu">
+      <img class="pecege-simbolo" src="assets/pecege-simbolo.svg" alt="" width="24" height="21">
+      Plataformas Pecege
+      <svg class="chevron"><use href="#i-chevron-up"/></svg>
+    </button>
+  </div>
 
   <script src="script.js"></script>
 </body>
