@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Ícone provisório do Kurama (cara de raposa) sobre um ladrilho Noite, no padrão dos outros apps -->
+  <rect width="128" height="128" rx="28" fill="#070010"/>
+  <path d="M28 30 L50 46 L78 46 L100 30 L96 66 Q92 92 64 102 Q36 92 32 66 Z" fill="#F08A2C"/>
+  <path d="M33 37 L46 47 L36 56 Z M95 37 L82 47 L92 56 Z" fill="#070010" opacity=".35"/>
+  <path d="M40 72 Q52 66 64 74 Q76 66 88 72 Q84 92 64 98 Q44 92 40 72 Z" fill="#F5F2FA"/>
+  <path d="M42 60 L56 64 L44 68 Z M86 60 L72 64 L84 68 Z" fill="#E0242F"/>
+  <circle cx="64" cy="80" r="4.5" fill="#070010"/>
+</svg>
