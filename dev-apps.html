@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="noite">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dev Apps · Audiovisual Pecege</title>
+  <meta name="description" content="Apps em desenvolvimento feitos pela equipe Audiovisual: Kurama do André.">
+  <meta name="theme-color" content="#070010">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icone-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icone-192.png">
+  <link rel="apple-touch-icon" href="assets/icone-180.png">
+  <link rel="preload" href="fonts/Altivo-Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="fonts/Altivo-Light.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subpagina.css">
+  <link rel="stylesheet" href="apps.css">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Só tem link a partir do botão "Dev Apps" de apps.html; não entra nos atalhos de index.html -->
+  <div class="wrap">
+    <header class="topbar">
+      <a href="apps.html" class="back"><svg><use href="#i-back"/></svg>Chiaro Apps</a>
+    </header>
+
+    <section class="intro">
+      <h1>Download <span>Dev Apps</span></h1>
+      <p class="meta">Apps em desenvolvimento, feitos por gente da equipe. Ainda estão em teste e mudam rápido.</p>
+    </section>
+
+    <!-- Um bloco por app, igual a apps.html. Para adicionar um app: copie uma <section class="app"> -->
+    <main class="apps">
+
+      <section class="app" id="kurama" aria-label="Kurama do André">
+        <div class="app-info">
+          <header class="app-head">
+            <img src="assets/apps/kurama.svg" alt="" width="64" height="64">
+            <div>
+              <h2><strong>Kurama</strong> do André</h2>
+              <span class="versao">v1.29.1 · Widget do Windows</span>
+            </div>
+          </header>
+          <p class="app-desc">Um widget para a área de trabalho que mostra o uso do <b>Claude</b>, da sessão de 5 h e da semana, com um bichinho que vive em cima disso.</p>
+          <ul class="recursos">
+            <li><svg><use href="#i-check"/></svg>Uso da sessão de 5 h e da semana sempre à vista na área de trabalho</li>
+            <li><svg><use href="#i-check"/></svg>Funciona com o Claude Code e com o Claude Desktop, e escolhe sozinho de onde ler</li>
+            <li><svg><use href="#i-check"/></svg>O bichinho ganha nível a cada sessão estourada, sofre quando o limite aperta, morre em 100% e ressuscita quando a janela vira</li>
+            <li><svg><use href="#i-check"/></svg>Vários personagens para escolher, e um Estúdio para criar o seu</li>
+          </ul>
+          <div class="acoes">
+            <!-- As versões saem nas Releases de Rozull/kurama -->
+            <a class="baixar" href="https://github.com/Rozull/kurama/releases/download/v1.29.1/Kurama-Setup-1.29.1.exe">
+              <svg><use href="#i-download"/></svg>Baixar instalador <small>.exe · 25 MB</small>
+            </a>
+          </div>
+        </div>
+
+        <div class="passos">
+          <h3>Como instalar</h3>
+          <ol>
+            <li>Baixe e abra o instalador com dois cliques. Não pede administrador nem Python.</li>
+            <li>O widget aparece na área de trabalho e fica no Menu Iniciar.</li>
+          </ol>
+          <p class="obs">Para atualizar, não precisa voltar aqui: quando sai versão nova, o próprio widget avisa no relatório e no menu da bandeja, e um clique instala e reinicia. Nível, avatar e posição continuam onde estavam.</p>
+          <p class="obs">Para remover: <b>Configurações → Aplicativos → Kurama do André</b>.</p>
+        </div>
+      </section>
+    </main>
+
+    <aside class="aviso">
+      <svg><use href="#i-info"/></svg>
+      <p>Os apps são internos e não têm assinatura digital. Se o Chrome perguntar se quer manter o arquivo, clique em <b>Manter</b>. Se o Windows mostrar “O Windows protegeu o computador”, clique em <b>Mais informações → Executar assim mesmo</b>.</p>
+    </aside>
+
+    <footer class="rodape">
+      <a href="apps.html">← Voltar aos Chiaro Apps</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -6,7 +6,7 @@
 
 /* ===== Topo: botões secundários em pílula ===== */
 .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.back, .miro {
+.back, .miro, .dev {
   display: inline-flex; align-items: center; gap: 8px;
   height: 36px; padding: 0 16px;
   border-radius: var(--radius-pill);
@@ -17,9 +17,9 @@
   letter-spacing: .02em; text-transform: uppercase;
   transition: background var(--dur-fast) var(--ease-cine), transform var(--dur-fast) var(--ease-cine);
 }
-.back svg, .miro svg { font-size: 16px; }
-.back:hover, .miro:hover { background: var(--accent-soft); }
-.back:active, .miro:active { transform: scale(.98); }
+.back svg, .miro svg, .dev svg { font-size: 16px; }
+.back:hover, .miro:hover, .dev:hover { background: var(--accent-soft); }
+.back:active, .miro:active, .dev:active { transform: scale(.98); }
 
 /* ===== Título: Light + Black ===== */
 .intro { margin: 32px 0 22px; }
