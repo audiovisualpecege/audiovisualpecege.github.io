@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Ícone provisório do Chiaro Perguntas (balão de pergunta) sobre um ladrilho Noite, no padrão dos outros apps -->
+  <rect width="128" height="128" rx="28" fill="#070010"/>
+  <path d="M34 30 H94 A12 12 0 0 1 106 42 V76 A12 12 0 0 1 94 88 H62 L44 102 V88 H34 A12 12 0 0 1 22 76 V42 A12 12 0 0 1 34 30 Z" fill="#8C4EDB"/>
+  <path d="M54 50 A10 10 0 1 1 68 59 Q64 61 64 66 V68" fill="none" stroke="#F5F2FA" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="64" cy="78" r="4.5" fill="#FACE95"/>
+</svg>
