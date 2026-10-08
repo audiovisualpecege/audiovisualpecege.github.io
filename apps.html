@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chiaro Apps · Audiovisual Pecege</title>
-  <meta name="description" content="Apps para todos da equipe Audiovisual: Chiaro Downloader, Chiaro Grabber, Chiaro Perguntas, GC Render e Rhythm.">
+  <meta name="description" content="Apps para todos da equipe Audiovisual: Chiaro Downloader, Chiaro Grabber, Chiaro Perguntas, GC Render e Chiaro Rhythm.">
   <meta name="theme-color" content="#070010">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icone-32.png">
@@ -157,18 +157,20 @@
             <img src="assets/apps/gc-render.png" alt="" width="64" height="64">
             <div>
               <h2>GC <strong>Render</strong></h2>
-              <span class="versao">v1.1.0 · Programa do Windows</span>
+              <span class="versao">v1.1.5 · Programa do Windows</span>
             </div>
           </header>
           <p class="app-desc">Renderiza os GCs feitos no After Effects, no formato <b>.mogrt</b>, sem precisar abrir nenhum software da Adobe.</p>
           <ul class="recursos">
             <li><svg><use href="#i-check"/></svg>Renderiza GCs em .mogrt direto, sem After Effects nem Premiere abertos</li>
+            <li><svg><use href="#i-check"/></svg>Aba de QR Code e GCs com QR Code, salvos na pasta que você escolher</li>
+            <li><svg><use href="#i-check"/></svg>Instala junto as fontes usadas nos GCs</li>
             <li><svg><use href="#i-check"/></svg>Programa próprio para Windows, com instalador</li>
           </ul>
           <div class="acoes">
-            <!-- 50 MB: maior que o limite de upload pelo site do GitHub (25 MB). As versões saem nas Releases de thalescmedieros/gc-render-releases -->
-            <a class="baixar" href="https://github.com/thalescmedieros/gc-render-releases/releases/download/v1.1.0/GC.Render.Setup.1.1.0.exe">
-              <svg><use href="#i-download"/></svg>Baixar instalador <small>.exe · 50 MB</small>
+            <!-- 63 MB: maior que o limite de upload pelo site do GitHub (25 MB). As versões saem nas Releases de thalescmedieros/gc-render-releases -->
+            <a class="baixar" href="https://github.com/thalescmedieros/gc-render-releases/releases/download/v1.1.5/GC.Render.Setup.1.1.5.exe">
+              <svg><use href="#i-download"/></svg>Baixar instalador <small>.exe · 63 MB</small>
             </a>
           </div>
         </div>
@@ -184,13 +186,13 @@
         </div>
       </section>
 
-      <section class="app" id="rhythm" aria-label="Rhythm">
+      <section class="app" id="rhythm" aria-label="Chiaro Rhythm">
         <div class="app-info">
           <header class="app-head">
             <img src="assets/apps/rhythm.svg" alt="" width="64" height="64">
             <div>
-              <h2><strong>Rhythm</strong></h2>
-              <span class="versao">v2.2.0 · Painel do Adobe Premiere Pro</span>
+              <h2>Chiaro <strong>Rhythm</strong></h2>
+              <span class="versao">v2.4.2 · Painel do Adobe Premiere Pro</span>
             </div>
           </header>
           <p class="app-desc">Um conjunto de ferramentas para automatizar a edição no Premiere Pro, direto num painel dentro do programa.</p>
@@ -198,13 +200,14 @@
             <li><svg><use href="#i-check"/></svg><b>Silêncios:</b> analisa o áudio e corta os silêncios em todas as faixas destravadas, mantendo o sincronismo, com prévia na timeline e backup da sequência</li>
             <li><svg><use href="#i-check"/></svg><b>Zoom:</b> aplica zoom alternado clipe a clipe, fixo ou em movimento, com o ponto de mira que você escolher</li>
             <li><svg><use href="#i-check"/></svg><b>Intercalar:</b> distribui os clipes entre duas faixas, um em cada, com J-cut, L-cut ou os dois</li>
+            <li><svg><use href="#i-check"/></svg><b>Sincronizar:</b> junta câmeras e gravadores pelo áudio, como o PluralEyes, numa cópia da sequência</li>
             <li><svg><use href="#i-check"/></svg>Funciona no Premiere Pro 2022 ou mais novo</li>
           </ul>
           <div class="acoes">
-            <a class="baixar" href="downloads/Instalar-Rhythm-2.2.0.exe" download>
-              <svg><use href="#i-download"/></svg>Baixar instalador <small>.exe · 640 KB</small>
+            <!-- As versões saem nas Releases de audiovisualpecege/ChiraroRhythm; o .zip traz o instalador em dist\ -->
+            <a class="baixar" href="https://github.com/audiovisualpecege/ChiraroRhythm/releases/download/v2.4.2/automacao-edicao_v2.4.2_2026-10-07.zip">
+              <svg><use href="#i-download"/></svg>Baixar instalador <small>.zip · 4,6 MB</small>
             </a>
-            <a class="alt" href="downloads/Rhythm-2.2.0.zip" download>ou baixar .zip com o desinstalador</a>
           </div>
         </div>
 
@@ -212,11 +215,11 @@
           <h3>Como instalar</h3>
           <ol>
             <li>Feche o Premiere Pro.</li>
-            <li>Baixe e abra o instalador. Ele instala sozinho e avisa quando terminar.</li>
+            <li>Baixe o .zip, extraia e abra <b>dist\Instalar-Rhythm-2.4.2.exe</b>. Ele instala sozinho e avisa quando terminar.</li>
             <li>Abra o Premiere Pro e vá em <b>Janela › Extensões › Rhythm</b>.</li>
           </ol>
           <p class="obs"><b>Já usava a Automação de Edição?</b> É o mesmo painel com nome novo: o instalador remove a versão antiga e coloca o Rhythm no lugar.</p>
-          <p class="obs">Para atualizar, rode o instalador novo. Para remover, use o <b>Desinstalar-Rhythm.exe</b> que vem no .zip.</p>
+          <p class="obs">Para atualizar, rode o instalador novo. Para remover, use o <b>Desinstalar-Rhythm.exe</b>, na mesma pasta dist do .zip.</p>
         </div>
       </section>
     </main>
