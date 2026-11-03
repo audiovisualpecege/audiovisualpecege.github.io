@@ -10,7 +10,7 @@
 //   freela  — true                         (vínculo freela)
 
 const EQUIPE = {
-  atualizacao: '30/09/2026',
+  atualizacao: '03/11/2026',
   // Link do quadro no Miro. Vazio = botão "Abrir no Miro" escondido.
   // PÚBLICO: trocar pelo link restrito (este link abre o quadro sem login)
   miro: 'https://miro.com/app/board/uXjVORwJtBg=/?share_link_id=547994466562',
@@ -149,10 +149,6 @@ const EQUIPE = {
       cargo: 'Pós-produção / Coordenação',
       coordenacao: [{ nome: 'Henrique Zerati Neves', gestao: 'coord', anos: 5 }],
       times: [
-        {
-          nome: 'Coordenação Técnica',
-          pessoas: [{ nome: 'Gabriela Torres de Oliveira Melo', gestao: 'raoni', anos: 10 }],
-        },
         {
           nome: 'Edição',
           pessoas: [
